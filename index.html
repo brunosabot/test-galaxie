@@ -13,79 +13,120 @@
         <div class="header__burger-menu">
             <svg class="header__burger-menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16" /></svg>
         </div>
-        <div class="header__logo">
+        <a href="index.html" class="header__logo">
             <span class="header__logo-text">Galaxie</span> Les 2 Apes Trail
-        </div>
+        </a>
         <div class="header__profile">L</div>
     </div>
 
+    <div class="menu">
+        <div class="menu__content">
+            <div class="menu__close">
+                <svg class="menu__close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close</title><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+            </div>
+            <a class="menu__item" href="index.html">
+                Accueil
+            </a>
+            <a class="menu__item" href="badges.html">
+                Badges
+            </a>
+            <a class="menu__item" href="badges-detail.html">
+                Badges détail
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const burgerMenu = document.querySelector('.header__burger-menu');
+        const menu = document.querySelector('.menu');
+        const menuClose = document.querySelector('.menu__close');
+
+        burgerMenu.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        menuClose.addEventListener('click', () => {
+            menu.classList.remove('active');
+        });
+    </script>
+
     <div class="stats__wrapper">
-        <div class="stats orange">
+        <div class="stats">
             <div class="stats__title">
                 <svg class="stats__title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>map-check-outline</title><path d="M18.25,22L15.5,19L16.66,17.82L18.25,19.41L21.84,15.82L23,17.23L18.25,22M20.5,3A0.5,0.5 0 0,1 21,3.5V13.34C20.37,13.12 19.7,13 19,13V5.7L16,6.86V13.8C15.2,14.27 14.5,14.91 14,15.68V6.87L10,5.47V17.13L13.05,18.2L13,19C13,19.46 13.05,19.92 13.15,20.35L9,18.9L3.66,20.97L3.5,21A0.5,0.5 0 0,1 3,20.5V5.38C3,5.15 3.15,4.97 3.36,4.9L9,3L15,5.1L20.34,3.03L20.5,3M5,6.46V18.31L8,17.15V5.45L5,6.46Z" /></svg>
-                Exploration
+                <span class="stats__title-text">Score Exploration</span>
+                <svg class="stats__title-help-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>help-circle-outline</title><path d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6Z" /></svg>
             </div>
             <div class="stats__data">
-                <div class="stats__graph">
-                    <div class="stats__graph-bar active" style="height: 10%"></div>
-                    <div class="stats__graph-bar active" style="height: 90%"></div>
-                    <div class="stats__graph-bar active" style="height: 50%"></div>
-                    <div class="stats__graph-bar active" style="height: 70%"></div>
-                    <div class="stats__graph-bar active" style="height: 20%"></div>
-                    <div class="stats__graph-bar active" style="height: 40%"></div>
-                    <div class="stats__graph-bar active" style="height: 40%"></div>
-                    <div class="stats__graph-bar active" style="height: 20%"></div>
-                    <div class="stats__graph-bar active" style="height: 10%"></div>
-                    <div class="stats__graph-bar" style="height: 45%"></div>
+                <div class="stats__graph-wrapper">
+                    <div class="stats__graph">
+                        <div class="stats__graph-bar active" style="height: 10%"></div>
+                        <div class="stats__graph-bar active" style="height: 90%"></div>
+                        <div class="stats__graph-bar active" style="height: 50%"></div>
+                        <div class="stats__graph-bar active" style="height: 70%"></div>
+                        <div class="stats__graph-bar active" style="height: 20%"></div>
+                        <div class="stats__graph-bar active" style="height: 40%"></div>
+                        <div class="stats__graph-bar active" style="height: 40%"></div>
+                        <div class="stats__graph-bar active" style="height: 20%"></div>
+                        <div class="stats__graph-bar active" style="height: 10%"></div>
+                        <div class="stats__graph-bar" style="height: 45%"></div>
+                    </div>
+                    <div class="stats__ranking">Top 20%</div>
                 </div>
-                <div>
+                <div class="stats__values">
                     <div class="stats__value">1506</div>
                     <div class="stats__ranking">4ème / 296</div>
                 </div>
             </div>
-            <div class="stats__separator"></div>
-            <a href="#" class="stats__link">
-                Découvrir
-                <svg class="stats__link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-            </a>
+            <div class="stats__links">
+                <a href="badges.html" class="stats__link">
+                    En obtenir plus
+                    <svg class="stats__link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+                </a>
+                <a href="#" class="stats__link">
+                    Classement complet
+                    <svg class="stats__link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+                </a>
+            </div>
         </div>
-        <div class="stats red">
+        <div class="stats">
             <div class="stats__title">
                 <svg class="stats__title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>timer-outline</title><path d="M12,20A7,7 0 0,1 5,13A7,7 0 0,1 12,6A7,7 0 0,1 19,13A7,7 0 0,1 12,20M19.03,7.39L20.45,5.97C20,5.46 19.55,5 19.04,4.56L17.62,6C16.07,4.74 14.12,4 12,4A9,9 0 0,0 3,13A9,9 0 0,0 12,22C17,22 21,17.97 21,13C21,10.88 20.26,8.93 19.03,7.39M11,14H13V8H11M15,1H9V3H15V1Z" /></svg>
-                Performance
+                <span class="stats__title-text">Score Performance</span>
+                <svg class="stats__title-help-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>help-circle-outline</title><path d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6Z" /></svg>
             </div>
             <div class="stats__data">
-                <div class="stats__graph">
-                    <div class="stats__graph-bar active" style="height: 10%"></div>
-                    <div class="stats__graph-bar active" style="height: 90%"></div>
-                    <div class="stats__graph-bar active" style="height: 50%"></div>
-                    <div class="stats__graph-bar active" style="height: 70%"></div>
-                    <div class="stats__graph-bar active" style="height: 20%"></div>
-                    <div class="stats__graph-bar" style="height: 40%"></div>
-                    <div class="stats__graph-bar" style="height: 40%"></div>
-                    <div class="stats__graph-bar" style="height: 20%"></div>
-                    <div class="stats__graph-bar" style="height: 10%"></div>
-                    <div class="stats__graph-bar" style="height: 45%"></div>
+                <div class="stats__graph-wrapper">
+                    <div class="stats__graph">
+                        <div class="stats__graph-bar active" style="height: 10%"></div>
+                        <div class="stats__graph-bar active" style="height: 90%"></div>
+                        <div class="stats__graph-bar active" style="height: 50%"></div>
+                        <div class="stats__graph-bar active" style="height: 70%"></div>
+                        <div class="stats__graph-bar active" style="height: 20%"></div>
+                        <div class="stats__graph-bar" style="height: 40%"></div>
+                        <div class="stats__graph-bar" style="height: 40%"></div>
+                        <div class="stats__graph-bar" style="height: 20%"></div>
+                        <div class="stats__graph-bar" style="height: 10%"></div>
+                        <div class="stats__graph-bar" style="height: 45%"></div>
+                    </div>
+                    <div class="stats__ranking">Top 60%</div>
                 </div>
-                <div>
+                <div class="stats__values">
                     <div class="stats__value">45.41</div>
                     <div class="stats__ranking">6ème / 294</div>
                 </div>
             </div>
-            <div class="stats__separator"></div>
-            <a href="#" class="stats__link">
-                Mes perfs
-                <svg class="stats__link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-            </a>
+            <div class="stats__links">
+                <a href="#" class="stats__link">
+                    Mes perfs
+                    <svg class="stats__link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+                </a>
+                <a href="#" class="stats__link">
+                    Classement complet
+                    <svg class="stats__link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+                </a>
+            </div>
         </div>
-    </div>
-
-    <div class="link__wrapper">
-        <a class="link">
-            <svg class="link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>help-circle-outline</title><path d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6Z" /></svg>
-            <span class="link__text">Comment ça fonctionne ?</span>
-            <svg class="link__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-        </a>
     </div>
 
     <div class="my-badge__wrapper">
@@ -102,12 +143,21 @@
         <img src="./badge.webp" alt="Badge" class="my-badge" />
     </div>
 
-    <div class="link__wrapper">
-        <a class="link">
-            <svg class="link__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>hazard-lights</title><path d="M12,12L14.33,16H9.68L12,12M12,8L6.21,18H17.8L12,8M12,2L1,21H23L12,2M12,6L19.53,19H4.47L12,6Z" /></svg>
-            <span class="link__text">Quels parcours sont ouverts ?</span>
-            <svg class="link__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-        </a>
+    <div class="parcours__wrapper">
+        <div class="parcours__heading">
+            <svg class="parcours__heading-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>map-marker-path</title><path d="M18,15A3,3 0 0,1 21,18A3,3 0 0,1 18,21C16.69,21 15.58,20.17 15.17,19H14V17H15.17C15.58,15.83 16.69,15 18,15M18,17A1,1 0 0,0 17,18A1,1 0 0,0 18,19A1,1 0 0,0 19,18A1,1 0 0,0 18,17M18,8A1.43,1.43 0 0,0 19.43,6.57C19.43,5.78 18.79,5.14 18,5.14C17.21,5.14 16.57,5.78 16.57,6.57A1.43,1.43 0 0,0 18,8M18,2.57A4,4 0 0,1 22,6.57C22,9.56 18,14 18,14C18,14 14,9.56 14,6.57A4,4 0 0,1 18,2.57M8.83,17H10V19H8.83C8.42,20.17 7.31,21 6,21A3,3 0 0,1 3,18C3,16.69 3.83,15.58 5,15.17V14H7V15.17C7.85,15.47 8.53,16.15 8.83,17M6,17A1,1 0 0,0 5,18A1,1 0 0,0 6,19A1,1 0 0,0 7,18A1,1 0 0,0 6,17M6,3A3,3 0 0,1 9,6C9,7.31 8.17,8.42 7,8.83V10H5V8.83C3.83,8.42 3,7.31 3,6A3,3 0 0,1 6,3M6,5A1,1 0 0,0 5,6A1,1 0 0,0 6,7A1,1 0 0,0 7,6A1,1 0 0,0 6,5M11,19V17H13V19H11M7,13H5V11H7V13Z" /></svg>
+            Nos parcours
+        </div>
+        <div class="parcours__title">
+            <div class="parcours__title-name">12 parcours</div>
+            <div class="parcours__title-value">
+                actuellement ouverts
+            </div>
+        </div>
+        <div class="parcours__web">
+            <div class="parcours__web-text">Voir les parcours ouverts</div>
+            <svg class="parcours__web-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+        </div>
     </div>
 
     <div class="popular__wrapper">
@@ -156,7 +206,6 @@
             <svg class="calendar__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
         </div>
         <div class="calendar__web">
-            <svg class="calendar__web-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>web</title><path d="M16.36,14C16.44,13.34 16.5,12.68 16.5,12C16.5,11.32 16.44,10.66 16.36,10H19.74C19.9,10.64 20,11.31 20,12C20,12.69 19.9,13.36 19.74,14M14.59,19.56C15.19,18.45 15.65,17.25 15.97,16H18.92C17.96,17.65 16.43,18.93 14.59,19.56M14.34,14H9.66C9.56,13.34 9.5,12.68 9.5,12C9.5,11.32 9.56,10.65 9.66,10H14.34C14.43,10.65 14.5,11.32 14.5,12C14.5,12.68 14.43,13.34 14.34,14M12,19.96C11.17,18.76 10.5,17.43 10.09,16H13.91C13.5,17.43 12.83,18.76 12,19.96M8,8H5.08C6.03,6.34 7.57,5.06 9.4,4.44C8.8,5.55 8.35,6.75 8,8M5.08,16H8C8.35,17.25 8.8,18.45 9.4,19.56C7.57,18.93 6.03,17.65 5.08,16M4.26,14C4.1,13.36 4,12.69 4,12C4,11.31 4.1,10.64 4.26,10H7.64C7.56,10.66 7.5,11.32 7.5,12C7.5,12.68 7.56,13.34 7.64,14M12,4.03C12.83,5.23 13.5,6.57 13.91,8H10.09C10.5,6.57 11.17,5.23 12,4.03M18.92,8H15.97C15.65,6.75 15.19,5.55 14.59,4.44C16.43,5.07 17.96,6.34 18.92,8M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg>
             <div class="calendar__web-text">En savoir plus</div>
             <svg class="calendar__web-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
         </div>
