@@ -22,7 +22,7 @@ html {
   --color-border: var(--primitive-grey-100);
   /* --color-border: transparent; */
   --color-card: var(--primitive-grey-0);
-  --color-card-accent: var(--primitive-green-50);
+  --color-card-accent: var(--primitive-grey-100);
   --color-text: var(--primitive-grey-900);
   --color-text-secondary: var(--primitive-grey-500);
   --color-text-white: var(--primitive-grey-0);
@@ -47,7 +47,7 @@ html {
     /* --color-border: var(--primitive-grey-800); */
     --color-border: transparent;
     --color-card: var(--primitive-grey-950);
-    --color-card-accent: var(--primitive-green-950);
+    --color-card-accent: var(--primitive-grey-800);
     --color-text: var(--primitive-grey-0);
     --color-text-secondary: var(--primitive-grey-300);
   
@@ -100,6 +100,7 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 
 .title {
@@ -929,4 +930,85 @@ svg {
 }
 .tabs__item--active {
   border-bottom-color: var(--color-accent);
+}
+
+.profile {
+  background: var(--color-card);
+  border-radius:16px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  padding: 16px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 16px;
+}
+.profile__title {
+  font-weight: 600;
+  margin-bottom: 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.profile__title-icon {
+  height: 20px;
+  width: 20px;
+  fill: var(--color-accent);
+}
+.profile__title-text {
+  flex-grow: 1;
+}
+.profile__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0;
+}
+.profile__actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+.profile__action {
+  background-color: var(--color-accent);
+  color: var(--color-text-white);
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  display: flex;
+  gap: 8px;
+  padding: 8px 16px;
+  width: fit-content;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.field__label {
+  font-size: 14px;
+  padding-left: 12px;
+}
+.field__input {
+  background-color: var(--color-card-accent);
+  border: 0;
+  height: 40px;
+  border-radius: 16px;
+  padding: 0 12px;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  outline: none;
+  width: 100%;
+}
+.field__input:focus {
+  outline: 2px solid var(--color-accent);
 }

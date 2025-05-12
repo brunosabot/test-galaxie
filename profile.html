@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="preload" as="style" onload="this.onload=null; this.rel='stylesheet'; document.body.classList.add('fontLoaded')">
+    <link rel="stylesheet" href="design-system.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header__burger-menu">
+            <svg class="header__burger-menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16" /></svg>
+        </div>
+        <a href="index.html" class="header__logo">
+            <span class="header__logo-text">Galaxie</span> Les 2 Apes Trail
+        </a>
+        <a href="profile.html" class="header__profile">L</a>
+    </div>
+
+    <div class="menu">
+        <div class="menu__content">
+            <div class="menu__close">
+                <svg class="menu__close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close</title><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+            </div>
+            <a class="menu__item" href="index.html">
+                Accueil
+            </a>
+            <a class="menu__item" href="badges.html">
+                Badges
+            </a>
+            <a class="menu__item" href="badges-detail.html">
+                Badges détail
+            </a>
+            <a class="menu__item" href="rank.html">
+                Classements
+            </a>
+            <a class="menu__item" href="profile.html">
+                Profil utilisateur
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const burgerMenu = document.querySelector('.header__burger-menu');
+        const menu = document.querySelector('.menu');
+        const menuClose = document.querySelector('.menu__close');
+
+        burgerMenu.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        menuClose.addEventListener('click', () => {
+            menu.classList.remove('active');
+        });
+    </script>
+
+<div class="profile">
+    <div class="profile__title">
+        <svg class="profile__title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>account-outline</title><path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6M12,13C14.67,13 20,14.33 20,17V20H4V17C4,14.33 9.33,13 12,13M12,14.9C9.03,14.9 5.9,16.36 5.9,17V18.1H18.1V17C18.1,16.36 14.97,14.9 12,14.9Z" /></svg>
+        <span class="profile__title-text">Données utilisateur</span>
+    </div>
+    <div class="profile__content">
+        <label class="field">
+            <span class="field__label">Ton prénom</span>
+            <input class="field__input" value="Bruno" />
+        </label>
+        <label class="field">
+            <span class="field__label">Ton nom</span>
+            <input class="field__input" value="Sabot" />
+        </label>
+        <label class="field">
+            <span class="field__label">Ton sexe</span>
+            <select class="field__input">
+                <option name="h">Homme</option>
+                <option name="f">Femme</option>
+            </select>
+        </label>
+        <label class="field">
+            <span class="field__label">Ta date de naissance</span>
+            <input class="field__input" type="date" value="1987-12-20" />
+        </label>
+    </div>
+    <div class="profile__actions">
+        <button type="button" class="profile__action">Changer mes données</button>
+    </div>
+</div>
+
+<div class="profile">
+    <div class="profile__title">
+        <svg class="profile__title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>account-lock-outline</title><path d="M10 12C12.21 12 14 10.21 14 8S12.21 4 10 4 6 5.79 6 8 7.79 12 10 12M10 6C11.11 6 12 6.9 12 8S11.11 10 10 10 8 9.11 8 8 8.9 6 10 6M12 20H2V17C2 14.33 7.33 13 10 13C11 13 12.38 13.19 13.71 13.56C13.41 14.12 13.23 14.74 13.21 15.39C12.23 15.1 11.11 14.9 10 14.9C7.03 14.9 3.9 16.36 3.9 17V18.1H12C12 18.13 12 18.17 12 18.2V20M20.8 17V15.5C20.8 14.1 19.4 13 18 13C16.6 13 15.2 14.1 15.2 15.5V17C14.6 17 14 17.6 14 18.2V21.7C14 22.4 14.6 23 15.2 23H20.7C21.4 23 22 22.4 22 21.8V18.3C22 17.6 21.4 17 20.8 17M19.5 17H16.5V15.5C16.5 14.7 17.2 14.2 18 14.2C18.8 14.2 19.5 14.7 19.5 15.5V17Z" /></svg>
+        <span class="profile__title-text">Mot de passe</span>
+    </div>
+    <div class="profile__content">
+        <label class="field">
+            <span class="field__label">Ton mot de passe actuel</span>
+            <input class="field__input" type="password" />
+        </label>
+        <label class="field">
+            <span class="field__label">Ton nouveau mot de passe</span>
+            <input class="field__input" type="password" />
+        </label>
+    </div>
+    <div class="profile__actions">
+        <button type="button" class="profile__action">Changer mon mot de passe</button>
+    </div>
+</div>
+</body>
+</html>
