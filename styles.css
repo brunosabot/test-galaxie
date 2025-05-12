@@ -797,3 +797,136 @@ svg {
   height: 20px;
   width: 20px;
 }
+
+.ranking {
+  background: var(--color-card);
+  border-radius:16px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  padding: 16px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 16px;
+}
+.ranking__title {
+  font-weight: 600;
+  margin-bottom: 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.ranking__title-icon {
+  height: 20px;
+  width: 20px;
+  fill: var(--color-accent);
+}
+.ranking__title-text {
+  flex-grow: 1;
+}
+.ranking__item {
+  display: flex;
+  height: 48px;
+  align-items: center;
+  border-radius: 16px;
+  position: relative;
+  left: -8px;
+  padding: 0 16px;
+  width: calc(100% + 16px);
+  gap: 16px;
+}
+.ranking-item--me {
+  background: var(--color-accent);
+  color: var(--color-text-white);
+}
+.ranking__icon {
+  text-align: center;
+  min-width: 20px;
+}
+.ranking__name {
+  flex-grow: 1;
+}
+.ranking__gender {
+  font-size: 12px;
+  font-weight: 900;
+}
+.ranking__gender-female {
+  color: #FF6EC7;
+}
+.ranking__gender-male {
+  color: #6EC7FF;
+}
+.ranking__score {
+  color: var(--color-accent);
+}
+.ranking-item--me .ranking__score {
+  color: var(--color-text-white);
+}
+
+.pagination {
+  background: var(--color-card);
+  border-radius:16px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  margin: 16px;
+}
+.pagination__item {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+.pagination__item--active {
+  background: var(--color-accent);
+  color: var(--color-text-white);
+}
+
+.filters {
+  background: var(--color-card);
+  border-radius:16px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  margin: 16px;
+}
+.filters__item {
+  height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  padding: 16px;
+  flex-grow: 1;
+}
+.filters__item--active {
+  background: var(--color-accent);
+  color: var(--color-text-white);
+}
+
+.tabs {
+  background: var(--color-card);
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.tabs__item {
+  height: 48px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  border-bottom: 2px solid transparent;
+}
+.tabs__item--active {
+  border-bottom-color: var(--color-accent);
+}
