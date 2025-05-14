@@ -187,6 +187,7 @@ svg {
   align-items: flex-end;
   gap: 16px;
   margin-top: 16px;
+  justify-content: flex-end;
 }
 
 .stats__link {
@@ -205,6 +206,11 @@ svg {
   height: 40px;
   border-radius: 16px;
   padding: 0 8px 0 16px;
+}
+.stats__link--single {
+  width: fit-content;
+  flex-basis: auto;
+  margin: auto;
 }
 
 .stats__link-icon {
@@ -1011,4 +1017,76 @@ svg {
 }
 .field__input:focus {
   outline: 2px solid var(--color-accent);
+}
+
+.perfs {
+  background: var(--color-card);
+  border-radius:16px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  padding: 16px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 16px;
+}
+.perfs__title {
+  font-weight: 600;
+  margin-bottom: 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.perfs__title-icon {
+  height: 20px;
+  width: 20px;
+  fill: var(--color-accent);
+}
+.blue .perfs__title-icon {
+  fill: var(--primitive-blue-500);
+}
+
+.perfs__title-text {
+  flex-grow: 1;
+}
+.perfs__item {
+  display: flex;
+  height: 48px;
+  align-items: center;
+  border-radius: 16px;
+  position: relative;
+  left: -8px;
+  padding: 0 16px;
+  width: calc(100% + 16px);
+  gap: 16px;
+  font-size: 14px;
+}
+.perfs__name {
+  flex-grow: 1;
+}
+.perfs-item--accent {
+  color: var(--color-accent);
+}
+.perfs-item--blue {
+  color: var(--primitive-blue-500);
+}
+.perfs-item--disabled .perfs__score {
+  opacity: 0.5;
+}
+.perfs__strava {
+  background: var(--color-card);
+  border-radius:16px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+.perfs__strava-icon {
+  fill: #fc4d01;
+  height: 20px;
+  width: 20px;
 }
