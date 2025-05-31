@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="preload" as="style" onload="this.onload=null; this.rel='stylesheet'; document.body.classList.add('fontLoaded')">
+    <link rel="stylesheet" href="design-system.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header__burger-menu">
+            <svg class="header__burger-menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>menu</title><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16" /></svg>
+        </div>
+        <a href="index.html" class="header__logo">
+            <span class="header__logo-text">Galaxie</span> Les 2 Apes Trail
+        </a>
+        <a href="profile.html" class="header__profile">L</a>
+    </div>
+
+    <div class="menu">
+        <div class="menu__content">
+            <div class="menu__close">
+                <svg class="menu__close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close</title><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+            </div>
+            <a class="menu__item" href="index.html">
+                Accueil
+            </a>
+            <a class="menu__item" href="badges.html">
+                Badges
+            </a>
+            <a class="menu__item" href="badges-detail.html">
+                Badges détail
+            </a>
+            <a class="menu__item" href="rank.html">
+                Classements
+            </a>
+            <a class="menu__item" href="profile.html">
+                Profil utilisateur
+            </a>
+            <a class="menu__item" href="perfs.html">
+                Mes performances
+            </a>
+            <a class="menu__item" href="photos.html">
+                Les albums photos
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const burgerMenu = document.querySelector('.header__burger-menu');
+        const menu = document.querySelector('.menu');
+        const menuClose = document.querySelector('.menu__close');
+
+        burgerMenu.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        menuClose.addEventListener('click', () => {
+            menu.classList.remove('active');
+        });
+    </script>
+
+    <div class="title">Les albums photos</div>
+
+    <div class="photo__wrapper">
+        <div class="photo">
+            <img src="./thumbnail.jpg" alt="Album" class="photo__image">
+            <div class="photo__overlay"></div>
+            <div class="photo__name">Le défi de la Muzelle 2025</div>
+        </div>
+        <div class="photo">
+            <img src="./thumbnail2.jpg" alt="Album" class="photo__image">
+            <div class="photo__overlay"></div>
+            <div class="photo__name">La boucle des Sagnes 2024/2025</div>
+        </div>
+        <div class="photo">
+            <img src="./thumbnail3.jpg" alt="Album" class="photo__image">
+            <div class="photo__overlay"></div>
+            <div class="photo__name">Les sorties de groupe du mardi</div>
+        </div>
+    </div>
+
+</body>
+</html>
