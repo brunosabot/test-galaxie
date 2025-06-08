@@ -31,6 +31,19 @@ html {
   --color-route-blue: var(--primitive-blue-500);
   --color-route-green: var(--primitive-green-500);
   --color-route-red: var(--primitive-red-500);
+
+  --color-danger-light: var(--primitive-red-100);
+  --color-danger: var(--primitive-red-500);
+  --color-danger-dark: var(--primitive-red-700);
+  --color-warning-light: var(--primitive-orange-100);
+  --color-warning: var(--primitive-orange-500);
+  --color-warning-dark: var(--primitive-orange-700);
+  --color-success-light: var(--primitive-green-100);
+  --color-success: var(--primitive-green-500);
+  --color-success-dark: var(--primitive-green-700);
+  --color-info-light: var(--primitive-blue-100);
+  --color-info: var(--primitive-blue-500);
+  --color-info-dark: var(--primitive-blue-700);
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -55,6 +68,19 @@ html {
     --color-route-blue: var(--primitive-blue-500);
     --color-route-green: var(--primitive-green-500);
     --color-route-red: var(--primitive-red-500);
+
+  --color-danger-light: var(--primitive-red-900);
+  --color-danger: var(--primitive-red-500);
+  --color-danger-dark: var(--primitive-red-300);
+  --color-warning-light: var(--primitive-orange-900);
+  --color-warning: var(--primitive-orange-500);
+  --color-warning-dark: var(--primitive-orange-300);
+  --color-success-light: var(--primitive-green-900);
+  --color-success: var(--primitive-green-500);
+  --color-success-dark: var(--primitive-green-300);
+  --color-info-light: var(--primitive-blue-900);
+  --color-info: var(--primitive-blue-500);
+  --color-info-dark: var(--primitive-blue-300);
   }
 }
 
@@ -347,6 +373,19 @@ svg {
   font-size: 14px;
 }
 
+.badge__section {
+  font-weight: 600;
+  margin: 16px 16px 0;
+  width: calc(100% - 32px);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.badge__result {
+  font-weight: 600;
+  margin: 32px 16px 16px 16px;
+  font-size: 20px;
+}
 .badge__chip-wrapper {
   margin: 16px;
   width: calc(100% - 32px);
@@ -375,6 +414,7 @@ svg {
   background: var(--color-accent-light-performance);
   border: 2px solid var(--color-accent-performance);
 }
+
 
 .badge {
   background: var(--color-card);
@@ -456,6 +496,25 @@ svg {
 }
 .validated.badge {
   border: 2px solid var(--color-accent);
+}
+.badge__matching {
+  font-size: 12px;
+  margin-top: 4px;
+}
+.badge__matching--bad {
+  color: var(--color-danger-dark);
+}
+.badge__matching--average {
+  color: var(--color-warning-dark);
+}
+.badge__matching--good {
+  color: var(--color-success-dark);
+}
+.badge__duration {
+  font-weight: 400;
+  font-size: 12px;
+  margin-top: 4px;
+  font-style: italic;
 }
 
 
