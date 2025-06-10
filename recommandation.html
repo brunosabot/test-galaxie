@@ -106,13 +106,6 @@
     <div class="title">Trouve ton parcours</div>
 
     <div class="card" id="step0">
-        <div class="badge__section">Tu souhaites ?</div>
-
-        <button class="button" onclick="setIsDuration()">Un parcours pour une durée définie</button>
-        <button class="button" onclick="setIsSpecificities()">Un parcours avec des spécificités</button>
-    </div>
-
-    <div class="card hidden" id="step1">
         <div class="badge__section">Quel est ton niveau ?</div>
 
         <div class="badge__chip-wrapper">
@@ -121,20 +114,7 @@
             <div class="badge__chip">Assez bon niveau</div>
             <div class="badge__chip active">Débutant</div>
         </div>
-
-        <div class="buttons">
-            <button class="ghost__button" onclick="prevStep()">
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-left</title><path d="M15.41,16.17L10.83,11.6l4.58-4.59L14,6l-6,6 6,6 1.6-1.6Z" /></svg>
-                Précédent
-            </button>
-            <button class="ghost__button" onclick="nextStep()">
-                Suivant
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-            </button>
-        </div>
-    </div>
-
-    <div class="card hidden" id="step2">
+    
         <div class="badge__section">Quel rythme pour ta sortie ?</div>
 
         <div class="badge__chip-wrapper">
@@ -142,42 +122,17 @@
             <div class="badge__chip">Moyen</div>
             <div class="badge__chip active">Tranquille</div>
         </div>
-
-        <div class="buttons">
-            <button class="ghost__button" onclick="prevStep()">
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-left</title><path d="M15.41,16.17L10.83,11.6l4.58-4.59L14,6l-6,6 6,6 1.6-1.6Z" /></svg>
-                Précédent
-            </button>
-            <button class="ghost__button" onclick="nextStep()">
-                Suivant
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-            </button>
-        </div>
-    </div>
-
-    <div class="card hidden" id="step3">
+    
         <div class="badge__section">Quel durée ?</div>
 
         <div class="badge__chip-wrapper">
             <div class="badge__chip">Moins d'un heure</div>
             <div class="badge__chip">de 1h à 2h</div>
             <div class="badge__chip">de 2h à 3h</div>
-            <div class="badge__chip active">Plus de 3h</div>
+            <div class="badge__chip">Plus de 3h</div>
+            <div class="badge__chip active">Indifférent</div>
         </div>
-
-        <div class="buttons">
-            <button class="ghost__button" onclick="prevStep()">
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-left</title><path d="M15.41,16.17L10.83,11.6l4.58-4.59L14,6l-6,6 6,6 1.6-1.6Z" /></svg>
-                Précédent
-            </button>
-            <button class="ghost__button" onclick="nextStep()">
-                Suivant
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-            </button>
-        </div>
-    </div>
-
-    <div class="card hidden" id="step4">
+    
         <div class="badge__section">Quelle difficulté ?</div>
 
         <div class="badge__chip-wrapper">
@@ -186,20 +141,7 @@
             <div class="badge__chip">Rouge 🔴</div>
             <div class="badge__chip">Noir ⚫️</div>
         </div>
-
-        <div class="buttons">
-            <button class="ghost__button" onclick="prevStep()">
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-left</title><path d="M15.41,16.17L10.83,11.6l4.58-4.59L14,6l-6,6 6,6 1.6-1.6Z" /></svg>
-                Précédent
-            </button>
-            <button class="ghost__button" onclick="nextStep()">
-                Suivant
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-            </button>
-        </div>
-    </div>
-
-    <div class="card hidden" id="step5">
+    
         <div class="badge__section">Quel type de parcours ?</div>
 
         <div class="badge__chip-wrapper">
@@ -209,20 +151,7 @@
             <div class="badge__chip">Parties assez plates</div>
             <div class="badge__chip">Terrain technique</div>
         </div>
-
-        <div class="buttons">
-            <button class="ghost__button" onclick="prevStep()">
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-left</title><path d="M15.41,16.17L10.83,11.6l4.58-4.59L14,6l-6,6 6,6 1.6-1.6Z" /></svg>
-                Précédent
-            </button>
-            <button class="ghost__button" onclick="nextStep()">
-                Suivant
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-            </button>
-        </div>
-    </div>
-
-    <div class="card hidden" id="step6">
+    
         <div class="badge__section">Quels points d'intérêt recherches-tu ?</div>
 
         <div class="badge__chip-wrapper">
@@ -230,20 +159,7 @@
             <div class="badge__chip">Panorama</div>
             <div class="badge__chip">Cascade</div>
         </div>
-
-        <div class="buttons">
-            <button class="ghost__button" onclick="prevStep()">
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-left</title><path d="M15.41,16.17L10.83,11.6l4.58-4.59L14,6l-6,6 6,6 1.6-1.6Z" /></svg>
-                Précédent
-            </button>
-            <button class="ghost__button" onclick="nextStep()">
-                Suivant
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-            </button>
-        </div>
-    </div>
-
-    <div class="card hidden" id="step7">
+    
         <div class="badge__section">
             D'où veux-tu partir ?
             <svg class="stats__title-help-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>help-circle-outline</title><path d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6Z" /></svg>
@@ -253,20 +169,7 @@
             <div class="badge__chip">Station</div>
             <div class="badge__chip">Peu importe</div>
         </div>
-
-        <div class="buttons">
-            <button class="ghost__button" onclick="prevStep()">
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-left</title><path d="M15.41,16.17L10.83,11.6l4.58-4.59L14,6l-6,6 6,6 1.6-1.6Z" /></svg>
-                Précédent
-            </button>
-            <button class="ghost__button" onclick="nextStep()">
-                Suivant
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-            </button>
-        </div>
-    </div>
-
-    <div class="card hidden" id="step8">
+    
         <div class="badge__section">
             As-tu le vertige ?
             <svg class="stats__title-help-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>help-circle-outline</title><path d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6Z" /></svg>
@@ -276,20 +179,7 @@
             <div class="badge__chip">Oui</div>
             <div class="badge__chip">Non</div>
         </div>
-
-        <div class="buttons">
-            <button class="ghost__button" onclick="prevStep()">
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-left</title><path d="M15.41,16.17L10.83,11.6l4.58-4.59L14,6l-6,6 6,6 1.6-1.6Z" /></svg>
-                Précédent
-            </button>
-            <button class="ghost__button" onclick="nextStep()">
-                Suivant
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-            </button>
-        </div>
-    </div>
-
-    <div class="card hidden" id="step9">
+    
         <div class="badge__section">
             Avec un chien ?
             <svg class="stats__title-help-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>help-circle-outline</title><path d="M11,18H13V16H11V18M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6A4,4 0 0,0 8,10H10A2,2 0 0,1 12,8A2,2 0 0,1 14,10C14,12 11,11.75 11,15H13C13,12.75 16,12.5 16,10A4,4 0 0,0 12,6Z" /></svg>
@@ -299,20 +189,9 @@
             <div class="badge__chip">Oui</div>
             <div class="badge__chip">Non</div>
         </div>
-
-        <div class="buttons">
-            <button class="ghost__button" onclick="prevStep()">
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-left</title><path d="M15.41,16.17L10.83,11.6l4.58-4.59L14,6l-6,6 6,6 1.6-1.6Z" /></svg>
-                Précédent
-            </button>
-            <button class="ghost__button" onclick="nextStep()">
-                Suivant
-                <svg class="ghost__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-            </button>
-        </div>
     </div>
 
-    <div class="badge__wrapper hidden" id="step10">
+    <div class="badge__wrapper" id="step10">
         <div class="badge__result">
             Les parcours sélectionnés pour toi :
         </div>
